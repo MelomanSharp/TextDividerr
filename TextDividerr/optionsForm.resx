@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>1. About the purpose of the program
+
+the program is designed to split large text data into smaller parts, which can be used for various purposes, such as indexing in search engines, preparing the source dataset for machine learning, etc. However, it differs from other similar tools in that its primary purpose is to facilitate input of text data into third-party software that has strict size constraints.
+
+2. Splitting options
+
+on the «separation» tab, you can configure the rules according to which the original text will be divided. In general, you can split it either by the size of the parts (by selecting «by size») or by special characters/phrases (by selecting «by separator»). In the latter case, the program will simply divide the text whenever it encounters the specified character or set of characters in the text (you can choose whether to remove it or not).
+
+in the first case, you have the option to split by text size: either by the number of characters or by the number of other, larger syntactic units, or even by the physical size of the text, depending on the specified encoding (click the «set» button next to your preferred option to apply).
+noteworthy: since it is assumed that the input data is not just a random set of characters but meaningful text, the program will never split syntactic units (i. E. , it will not split text in a way that breaks words, sentences, and so on). So, if, for example, you specify that your text should be split into parts of 1000 characters, but the 1000th character is the middle of a word, the program will split the text at the end of the last syntactic unit before 1000 and start the next part from the same point, not from the 1000th character in the text. You can modify the splitting options as you wish. For example, if you want to split some text with information, it is recommended to choose «sentence» as the minimum syntactic unit. This way, the text will be divided so that no sentence is cut in the middle. If, for some reason, you want to split exactly every 1000 characters regardless of content, select «symbol» as the minimum syntactic unit.
+
+3. Clipboard interaction
+
+since manually copying and pasting text parts can be quite tedious, you can configure the program to automatically copy text parts to your clipboard. If you enable this option, it works as follows:
+1) you split the text.
+2) the first part of your text is automatically copied to the clipboard.
+3) after you paste the first part where you want it, the second part will be automatically copied to your clipboard (you don’t need to select the next part and press ctrl+c for this, which will save you some extra seconds).
+4) this continues until you finish with all the parts or until you disable the option.
+
+4. Naming and numbering of parts
+
+if necessary, you can also automatically name and number the parts using a numerator. The «name of parts» field can work in two ways. If you enter only one line of text, that line will be inserted before each new part. If you enter multiple lines of text, these lines will be inserted before the parts in order (1st line before the 1st part, 2nd line before the 2nd part, and so on). If there are fewer lines than parts, insertion will start again from the first line. If you need to number the parts, you should insert the numerator as follows: {numerator}. For example, if you are splitting a book into chapters, it may look like this: chapter {numerator}. For this case, there is even an option to convert arabic numbers to roman numerals; just check the corresponding box. You can change the initial value of the numerator if desired, but by default, it is set to 1.
+
+5. Cleaning text from unwanted elements
+
+if your source text contains markup or other unwanted elements, you can enable text preprocessing for cleaning it up. On the «formatting» tab, select the markup you want to clean. If you need to remove specific stop words, you can enter them manually.
+
+6. Saving to a file
+
+you can, of course, set up automatic saving of multiple files to the desired folder on the «saving» tab by checking the box.
+
+7. Most importantly
+
+enjoy using the program! :)
+</value>
+  </data>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>
