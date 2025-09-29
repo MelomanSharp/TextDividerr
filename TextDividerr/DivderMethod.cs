@@ -300,33 +300,9 @@ namespace TextDividerr
         public static List<string> SplitTextBySeperator(string input, string separator)
         {
             if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(separator))
-            {
-                // Handle null or empty strings gracefully, my dear.
                 throw new ArgumentException("Input and separator cannot be null or empty.");
-            }
 
-            List<string> parts = new List<string>();
-            int startIndex = 0;
-
-            while (startIndex < input.Length)
-            {
-                int separatorIndex = input.IndexOf(separator, startIndex, StringComparison.Ordinal);
-
-                if (separatorIndex == -1)
-                {
-                    // If no more separators are found, add the remaining part and break.
-                    parts.Add(input.Substring(startIndex));
-                    break;
-                }
-
-                // Add the part before the separator to the list.
-                parts.Add(input.Substring(startIndex, separatorIndex - startIndex));
-
-                // Move the start index to the character after the separator.
-                startIndex = separatorIndex + separator.Length;
-            }
-
-            return parts;
+            return input.Split(new[] { separator }, StringSplitOptions.None).ToList();
         }
     }
 }
