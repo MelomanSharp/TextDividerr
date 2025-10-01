@@ -1,4 +1,4 @@
-name: CI — .NET (Ubuntu only)
+name: CI — .NET 
 
 on:
   push:
@@ -7,33 +7,32 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET 8 SDK
+      - name: Setup .NET 9 SDK
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '9.0.x'
 
-      - name: Show environment
-        run: |
-          echo "Runner: $RUNNER_OS"
-          dotnet --info
+      - name: Show dotnet info (debug)
+        run: dotnet --info
 
-      - name: Restore
+      - name: Restore solution / projects
         run: dotnet restore
 
-      - name: Build
+      - name: Build solution
         run: dotnet build --no-restore --configuration Release
 
-      - name: Run tests (explicit path)
-        run: |
-          if [ -f "TextDivider.Tests/TextDivider.Tests.csproj" ]; then
-            dotnet test TextDivider.Tests/TextDivider.Tests.csproj --no-build --configuration Release --verbosity normal
-          else
-            echo "Specific test project not found, running generic 'dotnet test'..."
-            dotnet test --no-build --configuration Release --verbosity normal
-          fi
+      - name: Run tests (explicit test project)
+        run: dotnet test TextDivider.Tests\TextDivider.Tests.csproj --no-build --configuration Release --verbosity normal
+
+      - name: Upload test results (optional)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: '**\TestResults\**'
