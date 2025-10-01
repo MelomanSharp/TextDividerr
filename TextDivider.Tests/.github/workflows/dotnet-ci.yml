@@ -1,0 +1,39 @@
+name: CI — .NET 
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Show environment
+        run: |
+          echo "Runner: $RUNNER_OS"
+          dotnet --info
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run tests (explicit path)
+        run: |
+          if [ -f "TextDivider.Tests/TextDivider.Tests.csproj" ]; then
+            dotnet test TextDivider.Tests/TextDivider.Tests.csproj --no-build --configuration Release --verbosity normal
+          else
+            echo "Specific test project not found, running generic 'dotnet test'..."
+            dotnet test --no-build --configuration Release --verbosity normal
+          fi
